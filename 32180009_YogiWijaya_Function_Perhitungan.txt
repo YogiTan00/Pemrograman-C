@@ -1,0 +1,62 @@
+#include <constrea.h>
+
+void batas(int c)
+{	for(c=1;c<=32;c++)
+	cout<<"=";
+   cout<<endl;
+}
+
+int tambah(int a, int b)
+{	int d;
+	d=a+b;
+   cout<<"Hasil Pertambahan = "<<d;
+   return(d);
+}
+
+int kurang(int a, int b)
+{	int e;
+	e=a-b;
+   cout<<"Hasil Pengurangan = "<<e;
+   return(e);
+}
+
+int kali(int a, int b)
+{	int f;
+	f=a*b;
+   cout<<"Hasil Perkali = "<<f;
+   return(f);
+}
+
+int bagi(int a, int b)
+{	int g;
+	g=a%b;
+   cout<<"Hasil Modulus = "<<g;
+   return(g);
+}
+
+
+void main()
+{  int a,b,c;
+	batas(c);
+	cout<<"Program Sederhana"<<endl;
+   batas(c);
+   cout<<"Masukkan Nilai A = "; cin>>a;
+   cout<<"Masukkan Nilai B = "; cin>>b;
+   batas(c);
+   tambah(a,b);
+   cout<<endl;
+	batas(c);
+   kurang(a,b);
+   cout<<endl;
+   batas(c);
+   kali(a,b);
+   cout<<endl;
+   batas(c);
+   bagi(a,b);
+   cout<<endl;
+   batas(c);
+   cout<<"Terima Kasih ^_^"<<endl;
+   batas(c);
+
+   getch();
+}

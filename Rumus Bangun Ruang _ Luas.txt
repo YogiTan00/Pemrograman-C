@@ -1,0 +1,136 @@
+#include <iostream.h>
+#include <conio.h>
+#include <stdlib.h>
+
+main()
+{
+int s1,v1,l1;
+int ls1,bs1;
+int hl1,hv1;
+int tp1;
+
+system("Color a");
+
+cout<<"====Kubus===="<<endl;
+cout<<"Sisi = ";
+cin>>s1;
+l1=s1*s1;
+v1=s1*s1*s1;
+cout<<"Volume = "<<v1<<endl;
+cout<<"Luas Permukaan = "<<l1<<endl;
+cout<<"Luas Seng yang digunakan = ";
+cin>>ls1;
+cout<<"Berat Semen yang digunakan = ";
+cin>>bs1;
+hl1=l1*ls1;
+hv1=v1*bs1;
+cout<<"Harga Luas & Volume = "<<hl1<<" & "<<hv1<<endl;
+tp1=hl1+hv1;
+cout<<"Total Pengeluaran = "<<tp1<<endl;
+
+cout<<endl;
+
+int p1,ls2,bs2,tp2;
+int l2,v2,t1;
+int hl2,hv2;
+cout<<"====Balok===="<<endl;
+cout<<"Panjang = ";
+cin>>p1;
+cout<<"Lebar = ";
+cin>>l1;
+cout<<"Tinggi = ";
+cin>>t1;
+v2=p1*l1*t1;
+l2=2*(p1+l1);
+cout<<"Volume = "<<v2<<endl;
+cout<<"Luas Permukaan = "<<l2<<endl;
+cout<<"Luas Seng yang digunakan = ";
+cin>>ls2;
+cout<<"Berat Semen yang digunakan = ";
+cin>>bs2;
+hl2=l1*ls1;
+hv2=v1*bs1;
+cout<<"Harga Luas & Volume = "<<hl2<<" & "<<hv2<<endl;
+tp2=hl2+hv2;
+cout<<"Total Pengeluaran = "<<tp2<<endl;
+
+cout<<endl;
+
+int p2,ls3,bs3,tp3;
+int l3,v3,t2;
+int hl3,hv3;
+cout<<"====Limas Segi Empat===="<<endl;
+cout<<"Panjang = ";
+cin>>p2;
+cout<<"Lebar = ";
+cin>>l3;
+cout<<"Tinggi = ";
+cin>>t2;
+v3=1/3*(p2*p2)*t2;
+l3=l3*l3*(1+1,7);
+cout<<"Volume = "<<v3<<endl;
+cout<<"Luas Permukaan = "<<l3<<endl;
+cout<<"Luas Seng yang digunakan = ";
+cin>>ls3;
+cout<<"Berat Semen yang digunakan = ";
+cin>>bs3;
+hl3=l2*ls2;
+hv3=v2*bs2;
+cout<<"Harga Luas & Volume = "<<hl3<<" & "<<hv3<<endl;
+tp3=hl3+hv3;
+cout<<"Total Pengeluaran = "<<tp3<<endl;
+
+cout<<endl;
+
+int j1,ls4,bs4,tp4;
+int t3,v4,l4,g1;
+int hl4,hv4;
+cout<<"====Kerucut===="<<endl;
+cout<<"Jari-Jari Bidang Alas = ";
+cin>>j1;
+cout<<"Garis Pelukis = ";
+cin>>g1;
+cout<<"Tinggi = ";
+cin>>t3;
+v4=1/3*(g1*g1)*t3;
+l4=3,14*g1*g1;
+cout<<"Volume = "<<v4<<endl;
+cout<<"Luas Permukaan = "<<l4<<endl;
+cout<<"Luas Seng yang digunakan = ";
+cin>>ls4;
+cout<<"Berat Semen yang digunakan = ";
+cin>>bs4;
+hl4=l4*ls4;
+hv4=v4*bs4;
+cout<<"Harga Luas & Volume = "<<hl4<<" & "<<hv4<<endl;
+tp4=hl4+hv4;
+cout<<"Total Pengeluaran = "<<tp4<<endl;
+
+cout<<endl;
+
+int j2,ls5,bs5,tp5;
+int t4,v5,l5,s2;
+int hl5,hv5;
+cout<<"====Tabung===="<<endl;
+cout<<"Jari-Jari Bidang Alas = ";
+cin>>j2;
+cout<<"Sisi = ";
+cin>>s2;
+cout<<"Tinggi = ";
+cin>>t4;
+v5=1/3*(s2*s2)*t4;
+l5=3,14*s2*s2;
+cout<<"Volume = "<<v5<<endl;
+cout<<"Luas Permukaan = "<<l5<<endl;
+cout<<"Luas Seng yang digunakan = ";
+cin>>ls5;
+cout<<"Berat Semen yang digunakan = ";
+cin>>bs5;
+hl5=l5*ls5;
+hv5=v5*bs5;
+cout<<"Harga Luas & Volume = "<<hl5<<" & "<<hv5<<endl;
+tp5=hl5+hv5;
+cout<<"Total Pengeluaran = "<<tp5<<endl;
+
+getch();
+}

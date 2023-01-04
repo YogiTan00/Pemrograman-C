@@ -1,0 +1,62 @@
+#include <constrea.h>
+#include <cstring.h>
+
+batas(int a)
+{
+	for(a=1;a<=32;a++)
+	{ cout<<"=";	}
+}
+
+mat(int a)
+{	cout<<"Masukkan Kode = "; cin>>a; }
+
+kmat(int a)
+{ 	mat(a);
+	if(mat(a) == 151)
+   	cout<<"Algoritma dan Pemrograman I";
+   else
+   if(mat(a) == 422)
+   	cout<<"Linux I";
+   else
+   if(mat(a) == 733)
+   	cout<<"PPN II (Access)";
+   else
+   if(mat(a) == 772)
+    	cout<<"DBMS";
+   else
+   	cout<<"Kode Salah";
+   }
+
+
+data(int mhs)
+{  string nama;
+	int a,nim,pers,tugas,uts,uas,total;
+	mat(a);
+   kmat(a);
+   cout<<"Masukkan Data Mahasiswa = "; cin>>mhs;
+
+   for(a=1;a<=mhs;a++)
+   {	cout<<"Data Ke-"<<(a+1);
+      cout<<"NIM = ";cin>>nim;
+
+   }
+
+}
+
+
+
+
+void main()
+{int a;
+batas(a);
+cout<<endl;
+cout<<"Program Hitung Nilai";
+cout<<endl;
+batas(a);
+
+
+
+getch();
+clrscr();
+getch();
+}

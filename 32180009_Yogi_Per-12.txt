@@ -1,0 +1,109 @@
+#include <constrea.h>
+#include <cstring.h>
+
+batas(int a)
+{	for(a=0;a<50;a++)
+	{	cout<<"=";}
+   cout<<endl;
+}
+
+
+
+data(int nota, int jt)
+{  int a,b,c,gt,by,kb,ppn=0,subt=0,jb[99],hs[99],to[99];
+	string np[99],kp[99];
+	cout<<"No. Nota : ";cin>>nota;
+	cout<<"Jumlah Transaksi : ";cin>>jt;
+   batas(a);
+
+
+   for(a=0;a<jt;a++)
+   {	cout<<"Transaksi Ke-"<<a+1<<endl;
+   	cout<<"Kode Paket : ";cin>>kp[a];
+      if(kp[a]=="b-01" || kp[a]=="B-01" || kp[a]=="b01" || kp[a]=="B01")
+   	{	np[a]="Cheese Burger    ";
+      	hs[a]=5500;
+      }
+      else
+      if(kp[a]=="b-02" || kp[a]=="B-02" || kp[a]=="b02" || kp[a]=="B02")
+   	{	np[a]="Beef Burger      ";
+      	hs[a]=7500;
+      }
+      else
+      if(kp[a]=="b-spc" || kp[a]=="B-SPC" || kp[a]=="bspc" || kp[a]=="BSPC")
+   	{	np[a]="Special Burger   ";
+      	hs[a]=11000;
+      }
+      else
+      if(kp[a]=="p-m" || kp[a]=="P-M" || kp[a]=="pm" || kp[a]=="PM")
+   	{	np[a]="Pizza Medium Size";
+      	hs[a]=24000;
+      }
+      else
+      if(kp[a]=="p-s" || kp[a]=="P-S" || kp[a]=="ps" || kp[a]=="PS")
+   	{	np[a]="Pizza Small Size ";
+      	hs[a]=9000;
+      }
+      else
+      if(kp[a]=="p-spc" || kp[a]=="P-SPC" || kp[a]=="pspc" || kp[a]=="PSPC")
+   	{	np[a]="Special Pizza    ";
+         hs[a]=75500;
+      }
+      else
+      if(kp[a]=="d-c" || kp[a]=="D-C" || kp[a]=="dc" || kp[a]=="DC")
+   	{	np[a]="Soft Drik Cola";
+         hs[a]=4500;
+      }
+      else
+      if(kp[a]=="d-j" || kp[a]=="D-J" || kp[a]=="dj" || kp[a]=="DJ")
+   	{	np[a]="Soft Drink Juice";
+      	hs[a]=3500;
+      }
+      else
+      {	cout<<"Kode Paket Salah"<<endl;	}
+
+      cout<<"Nama Paket : "<<np[a]<<endl;
+      cout<<"Harga Satuan : "<<hs[a]<<endl;
+      cout<<"Jumlah Beli : ";cin>>jb[a];
+
+      to[a]=jb[a]*hs[a];
+
+      cout<<"Total Harga : "<<to[a]<<endl;
+      batas(a);
+
+   }
+	for(c=0;c<jt;c++)
+   {	subt=subt+to[c];
+   	cout<<"Sub Total : "<<subt<<endl;
+   }
+
+
+
+   clrscr();
+   batas(a);
+   cout<<"No.Kode.P   Nama.P           Harga.S Jumlah.B Total"<<endl;
+   batas(a);
+   for(b=0;b<jt;b++)
+	{	cout<<b+1<<"  "<<kp[b]<<"  "<<np[b]<<"    "<<hs[b]<<"  "<<jb[b]<<"  "<<to[b]<<endl;}
+   batas(a);
+   cout<<"Sub Total : "<<subt<<endl;
+   ppn=subt*0.1;
+   cout<<"PPN 10% : "<<ppn<<endl;
+   gt=subt-ppn;
+   cout<<"Grand Total : "<<gt<<endl;
+   cout<<"Bayar : ";cin>>by;
+   kb=by-gt;
+   cout<<"Kembalian : "<<kb<<endl;
+}
+
+
+
+main()
+{	int a,note,jt;
+   batas(a);
+	cout<<"Serdam Burger & Pizza"<<endl;
+   batas(a);
+   data(note,jt);
+
+	getch();
+}

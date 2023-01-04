@@ -1,0 +1,48 @@
+//===================================== No.3
+#include <iostream.h>
+#include <conio.h>
+
+main()
+{
+int x;
+cout<<"Bilangan Genap"<<endl;
+
+for(x=2;x<=10;x=x+2)
+{
+	cout<<x<<"|";
+}
+	getch();
+}
+//==================
+#include <iostream.h>
+#include <conio.h>
+
+main()
+{
+int x=2;
+cout<<"Bilangan Genap"<<endl;
+
+while(x<=10)
+{
+	cout<<x<<"|";
+   x=x+2;
+   }
+getch();
+}
+
+#include <iostream.h>
+#include <conio.h>
+//==================
+main()
+{
+int x=2;
+cout<<"Bilangan Genap"<<endl;
+
+do
+{
+	cout<<x<<"|";
+   x=x+2;
+   }
+while(x<=10);
+getch();
+}

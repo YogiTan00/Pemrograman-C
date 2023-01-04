@@ -1,0 +1,76 @@
+#include <constrea.h>
+int a,b,c,d,x,y,z;
+main()
+{
+ gotoxy (37,1);cout<<"Matriks\n";
+ gotoxy (37,2);cout<<"-------\n"<<endl;
+
+ cout<<"Matriks A\n";
+ cout<<"Masukan Jumlah Baris : ";cin>>a;
+ cout<<"Masukan Jumlah Kolom : ";cin>>b;
+ int MA ['a'] ['b'];
+ for (x=1;x<=a;x++)
+ {
+  for (y=1;y<=b;y++)
+  {
+   cout<<"Matriks A ["<<x<<"] ["<<y<<"] : ";cin>>MA [x][y];
+  }
+ }cout<<endl;
+
+ cout<<"Matriks B\n";
+ cout<<"Masukan Jumlah Baris : ";cin>>c;
+ cout<<"Masukan Jumlah Kolom : ";cin>>d;
+ int MB ['c'] ['d'];
+ for (x=1;x<=c;x++)
+ {
+  for (y=1;y<=d;y++)
+  {
+   cout<<"Matriks B ["<<x<<"] ["<<y<<"] : ";cin>>MB [x][y];
+  }
+ }getch();clrscr();
+
+ cout<<"Matriks A\n";
+ for (x=1;x<=a;x++)
+ {
+  for (y=1;y<=b;y++)
+  {
+   cout<<setw(4)<<MA [x][y];
+  }cout<<endl;
+ }getch();cout<<endl;
+
+ cout<<"Matriks B\n";
+ for (x=1;x<=c;x++)
+ {
+  for (y=1;y<=d;y++)
+  {
+   cout<<setw(4)<<MB [x][y];
+  }cout<<endl;
+ }
+
+
+ int MC ['a']['d'];
+ for (x=1;x<=a;x++)
+ {
+  for (y=1;y<=d;y++)
+  {
+   for (z=1;z<=b;z++)
+   {
+    MC [x][y] += MA [x][z]* MB [z][y];
+   }
+  }
+ }getch();cout<<endl;
+
+cout<<"Matriks C = Matriks A * Matriks B\n\n";
+ getch();
+
+ cout<<"Matriks C\n";
+ for (x=1;x<=a;x++)
+ {
+  for (y=1;y<=d;y++)
+  {
+   cout<<setw(4)<<MC [x][y];
+  }cout<<endl;
+ }
+
+ getch();
+}

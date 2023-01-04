@@ -1,0 +1,32 @@
+#include <iostream.h>
+#include <conio.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+main()
+{
+system("color a");
+int tahun;
+cout<<"Masukkan Tahun = ";
+cin>>tahun;
+
+if(tahun <0)
+{
+	cout<<"Tahun Salah";
+   }
+else if(tahun >3000)
+{
+	cout<<"Tahun Salah";
+   }
+   else
+if(tahun %4==0)
+{
+	cout<<"Tahun Kabisat";
+   }
+   else
+{
+cout<<"Bukan Tahun Kabisat";
+   }
+
+getch();
+}

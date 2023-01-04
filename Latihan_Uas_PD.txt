@@ -1,0 +1,123 @@
+#include <constrea.h>
+#include <cstring.h>
+int nn,hp[99],jt,jb[99],total[99];
+string np[99],kode[99];
+void batas()
+{int z;
+ for(z=0;z<10;z++)
+ {
+ cout<<"===";
+ }
+}
+
+int hitung()
+{ int s;
+  cout<<"No. Nota = ";
+  cin>>nn;
+  cout<<endl;
+  cout<<"Jumlah Transaksi = ";
+  cin>>jt;
+  cout<<endl;
+   for(s=0;s<jt;s++)
+  {
+   cout<<"Transaksi ke - "<<s+1<<endl;
+   cout<<"Kode Paket = "<<endl;
+   cin>>kode[s];
+   if(kode[s]=="B-01")
+   {
+    np[s]="Cheese Burger";
+    hp[s]=5500;
+   }
+   else if(kode[s]=="B-02")
+   {
+    np[s]="Beef Burger";
+    hp[s]=7500;
+   }
+    else if(kode[s]=="B-SPC")
+   {
+    np[s]="Special Burger";
+    hp[s]=11000;
+   }
+    else if (kode[s]=="P-M")
+   {
+    np[s]="Pizza Medium Size";
+    hp[s]=24000;
+   }
+    else if(kode[s]=="P-S")
+   {
+    np[s]="Pizza Small Size";
+    hp[s]=9000;
+   }
+    else if(kode[s]=="P-SPC")
+   {
+    np[s]="Special Pizza";
+    hp[s]=75500;
+   }
+    else if(kode[s]=="D-C")
+   {
+    np[s]="Soft Drink Cola";
+    hp[s]=4500;
+   }
+    else if(kode[s]=="D-J")
+   {
+    np[s]="Soft drink cola";
+    hp[s]=3500;
+   }
+  cout<<"Nama Paket = "<<np[s]<<endl;
+  cout<<"Harga Satuan = "<<hp[s]<<endl;
+  cout<<"Jumlah beli = "<<endl;
+  cin>>jb[s];
+ }
+ getch();
+ clrscr();
+ return(0);
+}
+
+int hasil(int no)
+{
+ int a,s;
+ cout<<"No"<<"Kode Paket"<<"Nama Paket"<<"Harga Satuan"<<"Jumlah Beli"<<"Total"<<endl;
+ batas();
+ total[s]=jb[s]*hp[s];
+ for(a=1;a<=jt;a++)
+ {
+  cout<<no+1<<kode[s]<<np[s]<<hp[s]<<jb[s]<<total[s]<<endl;
+ }
+ return(0);
+}
+
+int akhir()
+{
+ int a,s,st,ppn,gt,bayar,kem;
+  for(a=1;a<=jt;a++)
+ {
+  st=st+total[s];
+ }
+ cout<<"Sub Total "<<": Rp"<<st<<endl;
+ ppn=st*0.1;
+ cout<<"PPN 10%"<<": Rp"<<ppn<<endl;
+ gt=st-ppn;
+ cout<<"Grand Total"<<": Rp"<<gt<<endl;
+ cout<<"Bayar "<<": Rp"<<bayar;
+ kem=bayar-gt;
+ cout<<"Kembalian"<<": Rp"<<kem;
+}
+main()
+{ int no;
+ batas();
+ cout<<endl;
+ cout<<"Serdam Burger & Pizza";
+ cout<<endl;
+ batas();
+ cout<<endl;
+ hitung();
+ cout<<endl;
+ batas();
+ cout<<endl;
+ hasil(no);
+ cout<<endl;
+ batas();
+ cout<<endl;
+ akhir();
+ getch();
+}

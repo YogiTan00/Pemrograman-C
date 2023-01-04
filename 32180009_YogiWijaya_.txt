@@ -1,0 +1,93 @@
+#include <constrea.h>
+#include <cstring.h>
+
+
+
+input(string nama)
+{
+	int tah,by,tby,hdis,ntest;
+   string kfakul,kjurusan,nurut,kf,kj;
+
+   cout<<"Masukkan Nama : ";cin>>nama;
+   cout<<"Masukkan Tahun Masuk : ";cin>>tah;
+   a:
+   cout<<"Masukkan Kode Fakultas : ";cin>>kfakul;
+   	if(kfakul=="01")
+   	{	kf = "Fakultas Teknik";
+   	}
+   	else
+   	if(kfakul=="02")
+  		{	kf = "Fakultas Pertanian";
+  	 	}
+   	else
+   	{	cout << "Salah kode silahkan ulang ";
+  			clrscr();
+         cout<<"Masukkan Nama : "<<nama<<endl;
+   		cout<<"Masukkan Tahun Masuk : "<<tah<<endl;
+   		goto a;
+   	}
+   	b:
+   	cout<<"Masukkan Kode Jurusan : ";cin>>kjurusan;
+   	if(kjurusan=="11")
+   	{  kj = "Taknik Informatika";
+      	by = 30000000;
+   	}
+   	else
+   	if(kjurusan=="21")
+   	{  kj = "Teknik Informatika";
+      	by = 32000000;
+   	}
+   	else
+   	if(kjurusan=="12")
+   	{  kj = "Agroteknologi";
+      	by = 32000000;
+   	}
+   	else
+   	if(kjurusan=="22")
+   	{  kj = "Kehutanan";
+      	by = 28000000;
+   	}
+   	else
+   	{	cout << "Salah kode silahkan ulang ";
+  			clrscr();
+         cout<<"Masukkan Nama : "<<nama<<endl;
+   		cout<<"Masukkan Tahun Masuk : "<<tah<<endl;
+         cout<<"Masukkan Kode Fakultas : "<<kfakul<<endl;
+   		goto b;
+   	}
+   	cout<<"Masukkan No Urut Pendaftaran : ";cin>>nurut;
+   	cout<<"Masukkan Nilai Test Masuk : ";cin>>ntest;
+
+  		if(ntest>=85)
+  		{	hdis=0.3*by;
+      }
+      else
+      if(ntest>=80)
+      {	hdis=0.15*by;
+      }
+      else
+      if(ntest<80)
+      { hdis=0;
+      }
+
+   cout<<endl;
+   cout<<"NIM Mahasiswa : "<<tah<<kfakul<<kjurusan<<nurut<<endl;
+  	cout<<"Kode Fakultas : "<<kfakul<<endl;
+   cout<<kf<<endl;
+   cout<<"Kode Jurusan : "<<kjurusan<<endl;
+   cout<<kj<<" : "<<by<<endl;
+   cout<<"Harga Discount : "<<hdis<<endl;
+   tby = by-hdis;
+   cout<<"Total Biaya Bersih : "<<tby;
+
+
+}
+
+
+main()
+{  string nama,kfakul;
+	input(nama);
+
+   getch();
+
+}

@@ -1,0 +1,90 @@
+#include <stdio.h>							//Memanggil Library
+#include <conio.h>							//Memanggil Library
+
+main ()									//Memulai Fungsi Prosedur
+{ int i, j;								//Penamaan Variabel Integer
+char ulang;								//Penamaan Variabel Character
+int matrikA [2][2], matrikB [2][2], HasilMatrik [2][2];			//Pemberian Integer Pada Array matrikA, matrikB, dan HasilMatrik
+/* Menu Utama */
+sp:									//Pemberian Variabel pengulangan
+printf("Operasi Perhitungan Matriks\n");				//Mengeluarkan kalimat yang terdapat didalam " "
+/* Input Nilai Matrik A */
+for(i=0;i<2;i++)							//Memasukkan Angka yang diinputan sebanyak 2x kebawah
+{ for(j=0;j<2;j++)							//Memasukkan Angka yang diinputan sebanyak 2x kebawah
+	{ printf("Masukan Nilai Matriks A [%d][%d] : ", i+1, j+1);	//Mengeluarkan Kalimat yang terdapat didalam " ",serta memberikan tambahan +1 saat Memasukki Angka Selanjutnya
+	scanf("%d",&matrikA[i][j]);					//Membaca Variabel matrikA
+	}
+}
+
+/* Input Nilai Matrik B */
+for(i=0;i<2;i++)							//Memasukkan Angka yang diinputan sebanyak 2x kebawah
+{ for(j=0;j<2;j++)							//Memasukkan Angka yang diinputan sebanyak 2x kebawah
+{ printf("Masukan Nilai Matriks B [%d][%d] : ", i+1, j+1);		//Mengeluarkan Kalimat yang terdapat didalam " ", serta memberikan tambahan +1 saat Memasukki Angka Selanjutnya
+scanf("%d",&matrikB[i][j]);						//Membaca Variabel matrikB
+}
+}
+
+/* Show Matrik A */
+printf("\nNilai Matriks A adalah :\n");					//Mengeluarkan Kalimat yang terdapat didalam " "
+for(i=0;i<2;i++)							//Mengeluarkan Angka yang diinputan sebanyak 2x kebawah
+{ for(j=0;j<2;j++)							//Mengeluarkan Angka yang diinputan sebanyak 2x kebawah
+{ printf("%d\t",matrikA [i][j]);					//Mengeluarkan Angka yang telah di input di matrikA
+}
+printf("\n");								//Memberikan jarak Enter
+}
+
+/* Show Matrik B */
+printf("\nNilai Matriks B adalah :\n");					//Mengeluarkan Kalimat yang terdapat didalam " "
+for(i=0;i<2;i++)							//Mengeluarkan Angka yang diinputan sebanyak 2x kebawah
+{ for(j=0;j<2;j++)							//Mengeluarkan Angka yang diinputan sebanyak 2x kebawah
+{ printf("%d\t",matrikB [i][j]);					//Mengeluarkan Angka yang telah di input di matrikB
+}
+printf("\n");								//Memberikan jarak Enter
+}
+
+printf("\n----------------------------------\n");			//Mengeluarkan Kalimat yang terdapat didalam " "	
+
+/* Penjumlahan Matrik */
+for(i=0;i<2;i++)							//Menggunakan Angka yang diinputan sebanyak 2x sebelumnya
+{ for(j=0;j<2;j++)							//Menggunakan Angka yang diinputan sebanyak 2x sebelumnya
+{ HasilMatrik [i][j]= matrikA [i][j]+ matrikB [i][j];			//Menghitung Penjumlahan Angka yang telah diinput dimatrikA dan matrikB
+}
+}
+
+/* Show Hasil Penjumlahan */
+printf("\nHasil Penjumlahan Matriks Adalah :\n");			//Mengeluarkan Kalimat yang terdapat didalam " "
+for(i=0;i<2;i++)							//Mengeluarkan Angka yang diinputan sebanyak 2x kebawah
+{ for(j=0;j<2;j++)							//Mengeluarkan Angka yang diinputan sebanyak 2x kebawah
+{ printf("%d\t",HasilMatrik [i][j]);					//Mengeluarkan Angka yang telah diprocess dari hasil Pertambahan sebelumnya
+}
+printf("\n");								//Memberikan jarak Enter
+}
+
+/* Pengurangan Matrik */
+for(i=0;i<2;i++)							//Menggunakan Angka yang diinputan sebanyak 2x sebelumnya
+{ for(j=0;j<2;j++)							//Menggunakan Angka yang diinputan sebanyak 2x sebelumnya
+{ HasilMatrik [i][j]= matrikA [i][j]-matrikB [i][j];			//Menghitung Pengurangan Angka yang telah diinput dimatrikA dan matrikB
+}
+}
+
+/* Show Hasil Pengurangan */
+printf("\nHasil Pengurangan Matriks Adalah :\n");			//Mengeluarkan Kalimat yang terdapat didalam " "
+for(i=0;i<2;i++)							//Mengeluarkan Angka yang diinputan sebanyak 2x kebawah
+{ for(j=0;j<2;j++)							//Mengeluarkan Angka yang diinputan sebanyak 2x kebawah
+{ printf("%d\t",HasilMatrik [i][j]);					//Mengeluarkan Angka yang telah diprocess dari hasil Pengurangan sebelumnya
+}
+printf("\n");								//Memberikan jarak Enter
+}
+
+/* Perulangan Operasi */
+{ printf("\nUlang Lagi atau Tidak [y/n] ?");				//Mengeluarkan Kalimat yang terdapat didalam " "
+scanf("\n%c",&ulang);							//Membaca huruf yang diinput
+
+if(ulang=='y')								//Pemilihan huruf yang diketik, jika "y"
+goto sp;								//Akana menuju "sp" yang terdapat di awal
+else if(ulang=='n')							//Jika bukan y atau huruf yang diketik "n"
+printf("Goodbye~~");							//Akan mengeluarkan Kalimat yang terdapat di dalam " "
+else									//Jika huruf yang dimasukkan salah
+printf("Pilihan itu tidak ada");					//Akan mengeluarkan kalimat yang terdapat di dalam " "
+}
+}

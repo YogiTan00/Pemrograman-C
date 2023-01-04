@@ -1,0 +1,59 @@
+#include <constrea.h>
+
+main()
+{
+int i,j,t;
+
+cout<<"Masukkan Banyak Titik = ";
+cin>>t;
+
+for(i=1;i<=t;i++)
+{	for(j=t;j>=i;j--)
+	cout<<" ";
+	for(j=1;j<=i+(i-1);j++)
+	cout<<"*";
+	cout<<endl;
+}
+
+for(i=t-1;i>=1;i--)
+{ 	for(j=t;j>=i;j--)
+	cout<<" ";
+	for(j=1;j<=i+(i-1);j++)
+	cout<<"*";
+   cout<<endl;
+}
+
+getch();
+}
+
+==================================================
+
+#include <constrea.h>
+
+main()
+{
+int i,j,t;
+
+cout<<"Masukkan Banyak Titik = ";
+cin>>t;
+
+for(i=1;i<=t;i++)
+{	for(j=t;j>=i;j--)
+	cout<<" ";
+	for(j=1;j<=i+(i-1);j++)
+	cout<<i;
+	cout<<endl;
+}
+
+for(i=t-1;i>=1;i--)
+{ 	for(j=t;j>=i;j--)
+	cout<<" ";
+	for(j=1;j<=i+(i-1);j++)
+	cout<<i;
+   cout<<endl;
+}
+
+getch();
+}
+
+

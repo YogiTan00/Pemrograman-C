@@ -1,0 +1,53 @@
+//===================================== No.7
+#include <iostream.h>
+#include <conio.h>
+
+main()
+{
+int x;
+cout<<"Bilangan Komposit Genap"<<endl;
+
+for(x=1; x<=10; x++)
+{
+	if((x==1 || (!(x==2 || x==3 || (x%2!=0 && x%3!=0)))) && x%2==0)
+   {cout<<x<<"|";}
+}
+getch();
+}
+//==================
+#include <iostream.h>
+#include <conio.h>
+
+main()
+{
+int x;
+cout<<"Bilangan Komposit Genap"<<endl;
+
+x=1;
+while(x<=10)
+{
+	if((x==1 || (!(x==2 || x==3 || (x%2!=0 && x%3!=0)))) && x%2==0)
+   {cout<<x<<"|";}
+x=x+1;
+}
+getch();
+}
+//==================
+#include <iostream.h>
+#include <conio.h>
+
+main()
+{
+int x;
+cout<<"Bilangan Komposit Genap"<<endl;
+
+x=1;
+do
+{
+	if((x==1 || (!(x==2 || x==3 || (x%2!=0 && x%3!=0)))) && x%2==0)
+   {cout<<x<<"|";}
+x=x+1;
+}
+while(x<=10);
+getch();
+}

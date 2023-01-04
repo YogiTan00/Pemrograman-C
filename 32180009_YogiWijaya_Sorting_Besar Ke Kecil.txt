@@ -1,0 +1,86 @@
+#include <constrea.h>
+
+batas()
+{  int i;
+	for(i=0;i<40;i++)
+   {	cout<<"=";}
+   cout<<endl;
+   return 0;
+}
+
+
+data()
+{  char f;
+	int a,b,c[99],d,e,i,j,k,l,m,min;
+
+	menu:
+   batas();
+	cout<<"1.Masukkan Angka 2.Bubble Sort 3.Slection Sort"<<endl;
+   cout<<"Pilih Menu : ";cin>>a;
+	if(a==1)
+   	{	cout<<"Masukkan Banyak Nilai : ";cin>>b;
+   		for(i=0;i<b;i++)
+      	{	cout<<"Masukk Nilai Ke-"<<i+1<<" : ";cin>>c[i];
+
+      	}
+   	goto lanjut;
+   	}
+   else
+   if(a==2)
+   	{  for(j=0;j<b;j++)
+   		{  for(k=(b-1);k>0;k--)
+   			{	if(c[k]<c[k-1])
+   				{	d=c[k];
+      				c[k]=c[k-1];
+         			c[k-1]=d;
+            	}
+      		}
+      	}
+
+   		for(j=(b-1);j>(0-1);j--)
+      	{	cout<<c[j]<<" ";}
+      cout<<endl;
+   	goto lanjut;
+   	}
+   else
+   if(a==3)
+   	{	for(l=0;l<b;l++)
+   		{  min=l;
+         	for(m=(b-1);m>0;m--)
+   			{	if(c[m]<c[m-1])
+   				{	e=c[m];
+      				c[m]=c[m-1];
+         			c[m-1]=e;
+      			}
+            }
+      	}
+
+
+         for(l=(b-1);l>(0-1);l--)
+      	{	cout<<c[l]<<" ";}
+      cout<<endl;
+      goto lanjut;
+      }
+
+
+	lanjut:
+	cout<<"Pilih Menu (y/n) : ";cin>>f;
+	if(f=='y' || f=='Y')
+	{	goto menu;}
+	else
+	if(f=='n' || f=='N')
+	{	clrscr();
+		cout<<"Terima Kasih";
+	}
+
+}
+
+main()
+{
+	data();
+
+getch();
+}
+
+
+

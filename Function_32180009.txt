@@ -1,0 +1,62 @@
+#include <constrea.h>
+
+int batas(int a);
+int ssegitiga(int b);
+int segitiga(int d);
+
+
+void main()
+{
+	int a,b,d,h,i,k;
+   h=batas(a);
+   cout<<endl;
+	cout<<"Program Sederhana"<<endl;
+   h=batas(a);
+   cout<<endl;
+   i=ssegitiga(b);
+   cout<<endl;
+   h=batas(a);
+   cout<<endl;
+   k=segitiga(d);
+   h=batas(a);
+   cout<<endl;
+   cout<<"Terima Kasih"<<endl;
+   h=batas(a);
+   cout<<endl;
+  getch();
+}
+
+int batas(int a)
+{
+	for(a=1;a<=32;a++)
+   cout<<"=";
+return(0);
+}
+
+int ssegitiga(int b)
+{  int a,c,i,j;
+	cout<<"Masukkan Segitiga Siku-Siku = "; cin>>c;
+   i=batas(a);
+   cout<<endl;
+	for(b=1;b<=c;b++)
+   {	for(j=1;j<=b;j++)
+   	cout<<"*";
+   	cout<<endl;
+   }
+return(0);
+}
+
+int segitiga(int d)
+{  int a,c,i,j;
+	cout<<"Masukkan Segitiga Siku-Siku = "; cin>>c;
+   i=batas(a);
+   cout<<endl;
+	for(d=1;d<=c;d++)
+   {  for(j=c;j>=d;j--)
+   	cout<<" ";
+   	for(j=1;j<=d+(d-1);j++)
+   	cout<<"*";
+   	cout<<endl;
+   }
+return(0);
+}

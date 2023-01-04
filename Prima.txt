@@ -1,0 +1,54 @@
+//===================================== No.4
+#include <iostream.h>
+#include <conio.h>
+
+main()
+{
+int x;
+cout<<"Bilangan Prima"<<endl;
+for(x=2; x<=10; x++)
+{
+	if(x==2 || x==3 || (x%2!=0 && x%3!=0))
+   {
+   cout<<x<<"|";}
+}
+getch();
+}
+//==================
+#include <iostream.h>
+#include <conio.h>
+
+main()
+{
+int x;
+cout<<"Bilangan Prima"<<endl;
+
+x=2;
+while(x<=10)
+{
+   	if(x==2 || x==3 || (x%2!=0 && x%3!=0))
+      {cout<<x<<"|";}
+x=x+1;
+}
+getch();
+}
+//==================
+#include <iostream.h>
+#include <conio.h>
+
+main()
+{
+int x;
+cout<<"Bilangan Prima"<<endl;
+
+x=2;
+do
+{
+	if(x==2 || x==3 || (x%2!=0 && x%3!=0))
+   {cout<<x<<"|";}
+x=x+1;
+}
+
+while(x<=10);
+getch();
+}

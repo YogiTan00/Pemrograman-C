@@ -1,0 +1,120 @@
+#include <Constrea>
+#include <cstring>
+
+int kode,n,ml=0,mtl=0;
+string mk;
+int  nim[99];
+string nama[99];
+string grade[99];
+int np [99];
+int nt [99];
+int nuts [99];
+int nuas [99];
+int total[99];
+
+
+
+void tampilan ()
+{
+	A:cout << "=============================================\n";
+   cout << "\tPROGRAM HITUNG NILAI\n";
+   cout << "=============================================\n";
+  	cout << "Kode mata kuliah \t : "; cin >> kode ;
+   if (kode == 151)
+   	{
+      	mk = "Algoritma dan Pemrograman I ";
+      }
+   else if (kode == 422)
+   	{
+      	mk = "Linux I";
+      }
+   else if (kode == 733)
+   	{
+      	mk = "PPN II (Access)";
+      }
+   else if (kode == 772)
+   	{
+      	mk = "DBMS";
+      }
+   else
+   	{
+      	cout << "Salah kode silahkan ulang ";
+         clrscr();
+         goto A;
+      }
+   cout << "Jumlah data mahasiswa \t : " ; cin >> n;
+}
+
+void inputan ()
+{
+	for (int i = 1; i<=n ; i++)
+   	{
+      	cout << "\tData ke - " << i << endl;
+         cout << "\tNIM \t\t\t : "; cin >> nim[i];
+         cout << "\tNama \t\t\t : "; cin >> nama[i];
+         cout << "\tNilai Presensi \t\t : "; cin >>np[i];
+         cout << "\tNilai Tugas  \t\t : "; cin >> nt[i];
+         cout << "\tNilai UTS  \t\t : "; cin >> nuts[i];
+         cout << "\tNilai UAS  \t\t : "; cin >> nuas[i];
+         cout << endl;
+         total[i] = (np[i]*0.1)+(nt[i]*0.2)+(nuts[i]*0.3)+(nuas[i]*0.4);
+         if(total[i] > 80)
+         	{
+            	grade[i] = "A";
+            }
+         else if (total[i] >70 && total[i] <= 80)
+         	{
+            	grade[i] = "B";
+            }
+         else if (total[i] >60 && total[i] <=70)
+         	{
+            	grade[i] = "C";
+            }
+         else if (total[i] >50 && total[i] <=60)
+         	{
+            	grade[i] = "D";
+            }
+         else
+         	{
+            	grade[i] = "E";
+            }
+           if (total[i] > 60)
+         	{
+            	ml ++ ;
+            }
+         else if (total[i] <= 60)
+         	{
+            	mtl ++ ;
+            }
+      }
+}
+
+
+
+
+void keluaran  ()
+{
+	cout << "Kode mata kuliah \t: "<< kode << endl;
+   cout << "Mata Kuliah \t\t: " << mk << endl;
+   cout << "===============================================================\n";
+   cout << "No.|NIM   | Nama \t|      \t    Nilai             | Total | Grade \n";
+   cout << "   |      | MHS  \t| Prsnsi | Tugas | UTS \t| UAS \t|       |\n";
+   cout << "===============================================================\n";
+   for ( int x = 1; x<=n;x++)
+   	{
+      	cout << endl;
+      	cout << x << ". " << " \t" << nim[x] << setw(10)  << nama[x] << setw(10)  << np[x] << setw(8)  << nt[x] << setw(8)  << nuts[x] << setw(8)  << nuas[x] << setw(8)  << total[x] << setw(8)  << grade[x] << endl;
+      }
+   cout << endl;
+   cout << "================================================================================\n";
+   cout << "\t\t\t\t\t Jumlah Mahasiswa Lulus \t= : " << ml << endl;
+   cout << "\t\t\t\t\t Jumlah Mahasiswa Tidak lulus \t= : " << mtl << endl;
+}
+
+main ()
+{
+	tampilan ();
+   inputan ();
+   keluaran ();
+   getche ();
+}
